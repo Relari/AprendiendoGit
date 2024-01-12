@@ -5,11 +5,11 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class PersonaRepoImpl implements IPersonaRepo {
+public class PersonaRepoImpl /*implements IPersonaRepo */{
 			
 
 private static Logger LOG = LoggerFactory.getLogger(PersonaRepoImpl.class);
-@Override
+//@Override
 public void registrar(String nombre) {
 	LOG.info("SE REGISTRO A " + nombre);
 		

@@ -29,3 +29,4 @@ public class DemoWebApplication implements CommandLineRunner {
 		service.registrar("Mitocode");
 	}
 }
+

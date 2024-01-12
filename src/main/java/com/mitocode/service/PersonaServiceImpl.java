@@ -14,8 +14,8 @@ public class PersonaServiceImpl implements IPersonaService {
 
 	@Override
 	public void registrar(String nombre) {
-		repo=new PersonaRepoImpl();
-		repo.registrar(nombre);
+		//repo=new PersonaRepoImpl();
+		//repo.registrar(nombre);
 
 	}
 
