@@ -7,8 +7,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,23 +33,6 @@ public class Persona {
     private String sexo;
     @Column(name = "fechaNacimiento", length = 50)
     private String  fechaNacimiento;
-
-    public int getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
    
 }
 
