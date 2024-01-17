@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mitocode.model.Persona;
+import com.mitocode.model.entity.PersonaEntity;
 import com.mitocode.repository.IPersonaRepo;
 
 @RestController
@@ -17,9 +17,9 @@ public class PersonaController {
 
 
 	@GetMapping("/Persona")
-	public Persona greeting() {
+	public PersonaEntity greeting() {
 		
-        Persona p = new Persona ();
+        PersonaEntity p = new PersonaEntity ();
         p.setIdPersona(1);
         p.setNombre("Mitocode");
         repo.save(p);

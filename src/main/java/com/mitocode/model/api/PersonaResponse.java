@@ -1,4 +1,4 @@
-package com.mitocode.model;
+package com.mitocode.model.api;
 
 import org.hibernate.annotations.Collate;
 
@@ -14,24 +14,26 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-@Entity
+
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @ToString
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PersonaResponse {
+
+
+
     private int idPersona;
-    @Column(name = "nombre", length = 50)
+
+   
     private String nombre;
     
-    @Column(name ="apellido", length = 50)
+   
     private String apellido;
-    @Column(name ="sexo", length = 50)
+
+    
     private String sexo;
-    @Column(name = "fechaNacimiento", length = 50)
+    
+   
     private String  fechaNacimiento;
    
 }

@@ -26,7 +26,7 @@ public class DemoWebApplication implements CommandLineRunner {
 
 
 		service=new PersonaServiceImpl();
-		service.registrar("Mitocode");
+		service.registrarNombre("Mitocode");
 	}
 }
 

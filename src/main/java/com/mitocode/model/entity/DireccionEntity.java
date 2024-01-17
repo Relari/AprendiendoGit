@@ -1,4 +1,5 @@
-package com.mitocode.model;
+
+package com.mitocode.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,25 +11,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+@Entity
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-
-@Entity
-public class Contacto {
+public class DireccionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idContacto;
+    private Long idDireccion;
 
-    @Column(name = "correo", length = 100)
-    private String correo;
+    @Column(name = "calle", length = 100, nullable = false, unique = true)
+    private String calle;
 
-    @Column(name = "telefono", length = 15)
-    private String telefono;
+    @Column(name = "ciudad", length = 50)
+    private String ciudad;
 
+    @Column(name = "codigo_postal", length = 10)
+    private String codigoPostal;
 }
+    
 
